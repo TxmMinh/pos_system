@@ -27,3 +27,8 @@ E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.View.frmSupplierView.resources
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.Model.frmProductAdd.resources
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.View.frmProductView.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.Model.frmPurchaseAdd.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.View.frmPurchaseView.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.Model.ucProduct.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.View.frmSaleView.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\POS_system\POS_system\obj\Debug\POS_system.Model.frmSaleAdd.resources

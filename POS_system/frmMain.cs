@@ -1,4 +1,5 @@
-﻿using POS_system.View;
+﻿using POS_system.Model;
+using POS_system.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,7 +44,7 @@ namespace POS_system
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -69,6 +70,31 @@ namespace POS_system
         private void btnProduct_Click(object sender, EventArgs e)
         {
             AddControls(new frmProductView());
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmPurchaseView());
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmSaleView());
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

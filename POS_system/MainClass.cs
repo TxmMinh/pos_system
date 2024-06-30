@@ -180,6 +180,7 @@ namespace POS_system
                 // using tag of the control to check if we want to validate it or not
                 if (Convert.ToString(c.Tag) != "" && Convert.ToString(c.Tag) != null)
                 {
+                    // for textbox
                     if (c is Guna.UI2.WinForms.Guna2TextBox)
                     {
                         Guna.UI2.WinForms.Guna2TextBox t = (Guna.UI2.WinForms.Guna2TextBox)c;
@@ -190,6 +191,25 @@ namespace POS_system
                             t.HoverState.BorderColor = Color.Red;
                             count++;
                         } else
+                        {
+                            t.BorderColor = Color.FromArgb(239, 243, 248);
+                            t.FocusedState.BorderColor = Color.FromArgb(95, 61, 204);
+                            t.HoverState.BorderColor = Color.FromArgb(95, 61, 204);
+                        }
+                    }
+
+                    // for combobox
+                    if (c is Guna.UI2.WinForms.Guna2ComboBox)
+                    {
+                        Guna.UI2.WinForms.Guna2ComboBox t = (Guna.UI2.WinForms.Guna2ComboBox)c;
+                        if (t.SelectedIndex==-1)
+                        {
+                            t.BorderColor = Color.Red;
+                            t.FocusedState.BorderColor = Color.Red;
+                            t.HoverState.BorderColor = Color.Red;
+                            count++;
+                        }
+                        else
                         {
                             t.BorderColor = Color.FromArgb(239, 243, 248);
                             t.FocusedState.BorderColor = Color.FromArgb(95, 61, 204);

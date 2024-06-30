@@ -133,6 +133,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2530782_bag_briefcase_business_bag_documents_bag_general_icon {
+            get {
+                object obj = ResourceManager.GetObject("2530782_bag_briefcase_business bag_documents bag_general_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2530835_compose_create_edit_edit_file_office_icon {
             get {
                 object obj = ResourceManager.GetObject("2530835_compose_create_edit_edit file_office_icon", resourceCulture);
@@ -176,6 +186,16 @@ namespace POS_system.Properties {
         internal static System.Drawing.Bitmap _4737441_building_estate_home_house_property_icon {
             get {
                 object obj = ResourceManager.GetObject("4737441_building_estate_home_house_property_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _52664_bin_empty_recycle_icon {
+            get {
+                object obj = ResourceManager.GetObject("52664_bin_empty_recycle_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

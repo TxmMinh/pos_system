@@ -29,5 +29,10 @@ namespace POS_system
                 MessageBox.Show("Invalid username or password! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

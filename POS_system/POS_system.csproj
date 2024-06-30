@@ -89,6 +89,18 @@
     <Compile Include="Model\frmProductAdd.Designer.cs">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmPurchaseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmPurchaseAdd.Designer.cs">
+      <DependentUpon>frmPurchaseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmSaleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmSaleAdd.Designer.cs">
+      <DependentUpon>frmSaleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmSupplierAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
       <DependentUpon>frmUserAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="Model\ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +158,18 @@
     <Compile Include="View\frmProductView.Designer.cs">
       <DependentUpon>frmProductView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPurchaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPurchaseView.Designer.cs">
+      <DependentUpon>frmPurchaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSaleView.Designer.cs">
+      <DependentUpon>frmSaleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmSupplierView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,11 +197,20 @@
     <EmbeddedResource Include="Model\frmProductAdd.resx">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmPurchaseAdd.resx">
+      <DependentUpon>frmPurchaseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmSaleAdd.resx">
+      <DependentUpon>frmSaleAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmSupplierAdd.resx">
       <DependentUpon>frmSupplierAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmUserAdd.resx">
       <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample.resx">
       <DependentUpon>Sample.cs</DependentUpon>
@@ -200,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPurchaseView.resx">
+      <DependentUpon>frmPurchaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSaleView.resx">
+      <DependentUpon>frmSaleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmSupplierView.resx">
       <DependentUpon>frmSupplierView.cs</DependentUpon>
@@ -286,6 +331,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1075425_case_accessory_woman_bag_pouch_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52664_bin_empty_recycle_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2530782_bag_briefcase_business bag_documents bag_general_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
