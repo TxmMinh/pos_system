@@ -33,18 +33,18 @@
             this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.CenterPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnCategory = new Guna.UI2.WinForms.Guna2Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CenterPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -108,7 +108,7 @@
             this.guna2Panel2.Controls.Add(this.guna2Button6);
             this.guna2Panel2.Controls.Add(this.btnCustomer);
             this.guna2Panel2.Controls.Add(this.guna2Button4);
-            this.guna2Panel2.Controls.Add(this.guna2Button3);
+            this.guna2Panel2.Controls.Add(this.btnProduct);
             this.guna2Panel2.Controls.Add(this.btnCategory);
             this.guna2Panel2.Controls.Add(this.lblUser);
             this.guna2Panel2.Controls.Add(this.guna2Button1);
@@ -121,44 +121,12 @@
             this.guna2Panel2.Size = new System.Drawing.Size(235, 680);
             this.guna2Panel2.TabIndex = 4;
             // 
-            // lblUser
-            // 
-            this.lblUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(12, 147);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(205, 36);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Username";
-            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(235, 61);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1009, 680);
-            this.guna2Panel3.TabIndex = 4;
-            // 
-            // CenterPanel
-            // 
-            this.CenterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CenterPanel.Location = new System.Drawing.Point(241, 67);
-            this.CenterPanel.Name = "CenterPanel";
-            this.CenterPanel.ShadowDecoration.Parent = this.CenterPanel;
-            this.CenterPanel.Size = new System.Drawing.Size(1000, 671);
-            this.CenterPanel.TabIndex = 0;
-            // 
             // btnSupplier
             // 
             this.btnSupplier.AutoRoundedCorners = true;
             this.btnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btnSupplier.BorderRadius = 21;
             this.btnSupplier.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSupplier.Checked = true;
             this.btnSupplier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnSupplier.CheckedState.Parent = this.btnSupplier;
             this.btnSupplier.CustomImages.Parent = this.btnSupplier;
@@ -183,7 +151,6 @@
             this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btnUser.BorderRadius = 21;
             this.btnUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnUser.Checked = true;
             this.btnUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnUser.CheckedState.Parent = this.btnUser;
             this.btnUser.CustomImages.Parent = this.btnUser;
@@ -208,7 +175,6 @@
             this.guna2Button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Button6.BorderRadius = 21;
             this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button6.Checked = true;
             this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.guna2Button6.CheckedState.Parent = this.guna2Button6;
             this.guna2Button6.CustomImages.Parent = this.guna2Button6;
@@ -232,7 +198,6 @@
             this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btnCustomer.BorderRadius = 21;
             this.btnCustomer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCustomer.Checked = true;
             this.btnCustomer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnCustomer.CheckedState.Parent = this.btnCustomer;
             this.btnCustomer.CustomImages.Parent = this.btnCustomer;
@@ -257,7 +222,6 @@
             this.guna2Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Button4.BorderRadius = 21;
             this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button4.Checked = true;
             this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.guna2Button4.CheckedState.Parent = this.guna2Button4;
             this.guna2Button4.CustomImages.Parent = this.guna2Button4;
@@ -275,29 +239,29 @@
             this.guna2Button4.TabIndex = 5;
             this.guna2Button4.Text = "Purchase";
             // 
-            // guna2Button3
+            // btnProduct
             // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.guna2Button3.BorderRadius = 21;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.Checked = true;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = global::POS_system.Properties.Resources._2528080_fashion_handbag_package_paper_paperbag_icon;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button3.Location = new System.Drawing.Point(29, 299);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button3.TabIndex = 4;
-            this.guna2Button3.Text = "Products";
+            this.btnProduct.AutoRoundedCorners = true;
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnProduct.BorderRadius = 21;
+            this.btnProduct.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnProduct.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnProduct.CheckedState.Parent = this.btnProduct;
+            this.btnProduct.CustomImages.Parent = this.btnProduct;
+            this.btnProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.HoverState.Parent = this.btnProduct;
+            this.btnProduct.Image = global::POS_system.Properties.Resources._2528080_fashion_handbag_package_paper_paperbag_icon;
+            this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProduct.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnProduct.Location = new System.Drawing.Point(29, 299);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.ShadowDecoration.Parent = this.btnProduct;
+            this.btnProduct.Size = new System.Drawing.Size(180, 45);
+            this.btnProduct.TabIndex = 4;
+            this.btnProduct.Text = "Products";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnCategory
             // 
@@ -305,7 +269,6 @@
             this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btnCategory.BorderRadius = 21;
             this.btnCategory.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCategory.Checked = true;
             this.btnCategory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnCategory.CheckedState.Parent = this.btnCategory;
             this.btnCategory.CustomImages.Parent = this.btnCategory;
@@ -324,13 +287,23 @@
             this.btnCategory.Text = "Category";
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
+            // lblUser
+            // 
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(12, 147);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(205, 36);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Username";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.Checked = true;
             this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
@@ -359,6 +332,26 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel3.Location = new System.Drawing.Point(235, 61);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(1009, 680);
+            this.guna2Panel3.TabIndex = 4;
+            // 
+            // CenterPanel
+            // 
+            this.CenterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CenterPanel.Location = new System.Drawing.Point(241, 67);
+            this.CenterPanel.Name = "CenterPanel";
+            this.CenterPanel.ShadowDecoration.Parent = this.CenterPanel;
+            this.CenterPanel.Size = new System.Drawing.Size(1000, 671);
+            this.CenterPanel.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -394,7 +387,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnProduct;
         private Guna.UI2.WinForms.Guna2Button btnCategory;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;

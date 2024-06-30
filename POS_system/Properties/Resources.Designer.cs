@@ -73,6 +73,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1075425_case_accessory_woman_bag_pouch_icon {
+            get {
+                object obj = ResourceManager.GetObject("1075425_case_accessory_woman_bag_pouch_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _115695_magnifying_glass_zoom_find_search_icon {
             get {
                 object obj = ResourceManager.GetObject("115695_magnifying glass_zoom_find_search_icon", resourceCulture);

@@ -65,5 +65,10 @@ namespace POS_system
         {
             AddControls(new frmCustomerView());
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmProductView());
+        }
     }
 }

@@ -83,6 +83,12 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmProductAdd.Designer.cs">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmSupplierAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     <Compile Include="View\frmCustomerView.Designer.cs">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProductView.Designer.cs">
+      <DependentUpon>frmProductView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmSupplierView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCustomerAdd.resx">
       <DependentUpon>frmCustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmProductAdd.resx">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmSupplierAdd.resx">
       <DependentUpon>frmSupplierAdd.cs</DependentUpon>
@@ -182,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProductView.resx">
+      <DependentUpon>frmProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmSupplierView.resx">
       <DependentUpon>frmSupplierView.cs</DependentUpon>
@@ -265,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1291768_delivery_fast_quick_truck_logistics_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1075425_case_accessory_woman_bag_pouch_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
