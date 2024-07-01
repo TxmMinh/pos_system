@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Guna2\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
@@ -59,6 +62,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaleAdd.Designer.cs">
+      <DependentUpon>frmSaleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserMain.Designer.cs">
+      <DependentUpon>frmUserMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmCustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +173,12 @@
     <Compile Include="View\frmCustomerView.Designer.cs">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmProductView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +190,12 @@
     </Compile>
     <Compile Include="View\frmPurchaseView.Designer.cs">
       <DependentUpon>frmPurchaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmSaleView.cs">
       <SubType>Form</SubType>
@@ -188,6 +221,12 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserMain.resx">
+      <DependentUpon>frmUserMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,9 +238,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmPurchaseAdd.resx">
       <DependentUpon>frmPurchaseAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmSaleAdd.resx">
-      <DependentUpon>frmSaleAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmSupplierAdd.resx">
       <DependentUpon>frmSupplierAdd.cs</DependentUpon>
@@ -237,11 +273,17 @@
     <EmbeddedResource Include="View\frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPurchaseView.resx">
       <DependentUpon>frmPurchaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmSaleView.resx">
       <DependentUpon>frmSaleView.cs</DependentUpon>
@@ -313,6 +355,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DB\" />
+    <Folder Include="Reports\" />
+    <Folder Include="User\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2530835_compose_create_edit_edit file_office_icon.png" />
@@ -337,6 +381,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2530782_bag_briefcase_business bag_documents bag_general_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginwin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643771_configuration_configure_gear_set_setting_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\728935_exit_left_logout_arrow_move_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\728935_exit_left_logout_arrow_move_icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

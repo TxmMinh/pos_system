@@ -65,12 +65,22 @@ namespace POS_system
             private set { user = value; } 
         }
 
+        public static void setUser(string value)
+        {
+            user = value;
+        }
+
         public static Image img;
 
         public static Image IMG
         {
             get { return img; }
             private set { img = value; }
+        }
+
+        public static void setImage(Image value)
+        {
+            img = value;
         }
 
         public static int SQL (string query, Hashtable ht)

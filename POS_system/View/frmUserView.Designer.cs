@@ -38,6 +38,7 @@
             this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPhonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
@@ -77,13 +78,13 @@
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(618, 86);
+            this.txtSearch.Location = new System.Drawing.Point(756, 86);
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(418, 45);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(628, 57);
+            this.label2.Location = new System.Drawing.Point(766, 57);
             // 
             // guna2DataGridView1
             // 
@@ -115,6 +116,7 @@
             this.dgvUsername,
             this.dgvPass,
             this.dgvPhonenumber,
+            this.dgvRole,
             this.dgvEdit,
             this.dgvDel});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -207,6 +209,13 @@
             this.dgvPhonenumber.Name = "dgvPhonenumber";
             this.dgvPhonenumber.ReadOnly = true;
             // 
+            // dgvRole
+            // 
+            this.dgvRole.HeaderText = "Role";
+            this.dgvRole.MinimumWidth = 6;
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.ReadOnly = true;
+            // 
             // dgvEdit
             // 
             this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -258,6 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPass;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPhonenumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvRole;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDel;
     }

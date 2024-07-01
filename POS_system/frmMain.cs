@@ -31,6 +31,7 @@ namespace POS_system
 
             lblUser.Text = MainClass.USER;
             guna2CirclePictureBox1.Image = MainClass.IMG;
+            btnHome.PerformClick();
         }
 
         public void AddControls(Form F)
@@ -95,6 +96,18 @@ namespace POS_system
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmDashBoard());
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
     }
 }

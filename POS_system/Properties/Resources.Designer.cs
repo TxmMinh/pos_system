@@ -183,6 +183,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3643771_configuration_configure_gear_set_setting_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("3643771_configuration_configure_gear_set_setting_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4737441_building_estate_home_house_property_icon {
             get {
                 object obj = ResourceManager.GetObject("4737441_building_estate_home_house_property_icon", resourceCulture);
@@ -216,6 +226,26 @@ namespace POS_system.Properties {
         internal static System.Drawing.Bitmap _646193_maginifying_out_search_zoom_icon {
             get {
                 object obj = ResourceManager.GetObject("646193_maginifying_out_search_zoom_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _728935_exit_left_logout_arrow_move_icon {
+            get {
+                object obj = ResourceManager.GetObject("728935_exit_left_logout_arrow_move_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _728935_exit_left_logout_arrow_move_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("728935_exit_left_logout_arrow_move_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +316,16 @@ namespace POS_system.Properties {
         internal static System.Drawing.Bitmap loginwin {
             get {
                 object obj = ResourceManager.GetObject("loginwin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginwin1 {
+            get {
+                object obj = ResourceManager.GetObject("loginwin1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

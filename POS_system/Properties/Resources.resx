@@ -148,8 +148,14 @@
   <data name="8666691_home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8666691_home_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="10555_delete_trash_yellow_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10555_delete_trash_yellow_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loginwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="728935_exit_left_logout_arrow_move_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\728935_exit_left_logout_arrow_move_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="7548789_user_interface_person_avatar_customer_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7548789_user_interface_person_avatar_customer_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,19 +178,25 @@
   <data name="1564535_customer_user_userphoto_account_person_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9054319_bx_category_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9054319_bx_category_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="10555_delete_trash_yellow_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\10555_delete_trash_yellow_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2530782_bag_briefcase_business bag_documents bag_general_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2530782_bag_briefcase_business bag_documents bag_general_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="352006_add_circle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352006_add_circle_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="9054319_bx_category_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9054319_bx_category_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginwin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginwin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3643771_configuration_configure_gear_set_setting_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3643771_configuration_configure_gear_set_setting_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="290120_account_avatar_man_profile_user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\290120_account_avatar_man_profile_user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2530782_bag_briefcase_business bag_documents bag_general_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2530782_bag_briefcase_business bag_documents bag_general_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="728935_exit_left_logout_arrow_move_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\728935_exit_left_logout_arrow_move_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
