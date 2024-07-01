@@ -62,7 +62,25 @@ namespace POS_system
         public static string USER
         {
             get { return user; }
-            private set { user = value; } 
+            private set { user = value; }
+        }
+
+        public static int userID;
+
+        public static int USERID
+        {
+            get { return userID; }
+            private set { userID = value; }
+        }
+
+        public static void setUserID(int value)
+        {
+            userID = value;
+        }
+
+        public static void setUser(string value)
+        {
+            user = value;
         }
 
         public static Image img;
@@ -73,7 +91,12 @@ namespace POS_system
             private set { img = value; }
         }
 
-        public static int SQL (string query, Hashtable ht)
+        public static void setImage(Image value)
+        {
+            img = value;
+        }
+
+        public static int SQL(string query, Hashtable ht)
         {
             int res = 0;
             try
@@ -88,7 +111,8 @@ namespace POS_system
                 if (con.State == ConnectionState.Closed) { con.Open(); }
                 res = cmd.ExecuteNonQuery();
                 if (con.State == ConnectionState.Open) { con.Close(); }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 con.Close();
@@ -190,7 +214,8 @@ namespace POS_system
                             t.FocusedState.BorderColor = Color.Red;
                             t.HoverState.BorderColor = Color.Red;
                             count++;
-                        } else
+                        }
+                        else
                         {
                             t.BorderColor = Color.FromArgb(239, 243, 248);
                             t.FocusedState.BorderColor = Color.FromArgb(95, 61, 204);
@@ -202,7 +227,7 @@ namespace POS_system
                     if (c is Guna.UI2.WinForms.Guna2ComboBox)
                     {
                         Guna.UI2.WinForms.Guna2ComboBox t = (Guna.UI2.WinForms.Guna2ComboBox)c;
-                        if (t.SelectedIndex==-1)
+                        if (t.SelectedIndex == -1)
                         {
                             t.BorderColor = Color.Red;
                             t.FocusedState.BorderColor = Color.Red;
@@ -221,7 +246,8 @@ namespace POS_system
                 if (count == 0)
                 {
                     isValid = true;
-                } else
+                }
+                else
                 {
                     isValid = false;
                 }

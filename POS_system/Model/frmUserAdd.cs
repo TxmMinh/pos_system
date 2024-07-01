@@ -28,19 +28,22 @@ namespace POS_system
             {
                 MessageBox.Show("Please remove errors", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            } else
+            }
+            else
             {
                 string query = "";
                 if (id == 0) //insert 
                 {
-                    query = @"insert into users values (@name, @username, @pass, @phone, @image)";
-                } else // update
+                    query = @"insert into users values (@name, @username, @pass, @phone, @image, @role)";
+                }
+                else // update
                 {
                     query = @"update users set uName=@name,
                               uUsername=@username,
                               uPass=@pass,
                               uPhoneNumber=@phone,
-                              uImage=@image
+                              uImage=@image,
+                              uRole=@role
                               where userID=@id";
                 }
 
@@ -55,6 +58,7 @@ namespace POS_system
                 ht.Add("@username", txtUser.Text);
                 ht.Add("@pass", txtPass.Text);
                 ht.Add("@phone", txtPhone.Text);
+                ht.Add("@role", cbRole.SelectedItem.ToString());
                 ht.Add("@image", imageByteArray);
 
                 if (MainClass.SQL(query, ht) > 0)
@@ -65,6 +69,7 @@ namespace POS_system
                     txtUser.Text = "";
                     txtPass.Text = "";
                     txtPhone.Text = "";
+                    cbRole.SelectedItem = 1;
                     txtPic.Image = Properties.Resources._1564535_customer_user_userphoto_account_person_icon;
                     txtName.Focus();
                 }
@@ -78,7 +83,8 @@ namespace POS_system
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images(.jpg, .png)|*.png; *jpg";
-            if (ofd.ShowDialog() == DialogResult.OK) {
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
                 filePath = ofd.FileName;
                 txtPic.Image = new Bitmap(filePath);
             }
@@ -101,6 +107,10 @@ namespace POS_system
 
         private void frmUserAdd_Load(object sender, EventArgs e)
         {
+            cbRole.Items.Add("ADMIN");
+            cbRole.Items.Add("USER");
+            cbRole.SelectedIndex = 1;
+
             if (id > 0)
             {
                 LoadImage();

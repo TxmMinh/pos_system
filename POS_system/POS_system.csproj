@@ -140,6 +140,24 @@
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\frmUserMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserMain.Designer.cs">
+      <DependentUpon>frmUserMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserSaleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserSaleAdd.Designer.cs">
+      <DependentUpon>frmUserSaleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserViewSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserViewSale.Designer.cs">
+      <DependentUpon>frmUserViewSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCategoryView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +169,12 @@
     </Compile>
     <Compile Include="View\frmCustomerView.Designer.cs">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmProductView.cs">
       <SubType>Form</SubType>
@@ -231,11 +255,23 @@
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserMain.resx">
+      <DependentUpon>frmUserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserSaleAdd.resx">
+      <DependentUpon>frmUserSaleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserViewSale.resx">
+      <DependentUpon>frmUserViewSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
@@ -337,6 +373,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2530782_bag_briefcase_business bag_documents bag_general_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginwin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\728935_exit_left_logout_arrow_move_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643771_configuration_configure_gear_set_setting_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\622414_buy_cart_shopping_basket_ecommerce_icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

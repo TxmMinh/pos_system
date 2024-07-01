@@ -1,6 +1,6 @@
-﻿namespace POS_system.View
+﻿namespace POS_system.User
 {
-    partial class frmUserView
+    partial class frmUserViewSale
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPhonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCusID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
@@ -48,7 +47,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1070, 158);
+            this.guna2Panel1.Size = new System.Drawing.Size(1075, 158);
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnAdd
             // 
@@ -64,8 +64,8 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(103, 32);
-            this.label1.Text = "User List";
+            this.label1.Size = new System.Drawing.Size(61, 40);
+            this.label1.Text = "List";
             // 
             // txtSearch
             // 
@@ -78,20 +78,20 @@
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(756, 86);
+            this.txtSearch.Location = new System.Drawing.Point(721, 86);
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(418, 45);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(766, 57);
+            this.label2.Location = new System.Drawing.Point(731, 57);
             // 
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -100,36 +100,35 @@
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 35;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSr,
             this.dgvId,
-            this.dgvName,
-            this.dgvUsername,
-            this.dgvPass,
-            this.dgvPhonenumber,
-            this.dgvRole,
+            this.dgvDate,
+            this.dgvCusID,
+            this.dgvCustomer,
+            this.dgvAmount,
             this.dgvEdit,
             this.dgvDel});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(46, 188);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(46, 177);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
@@ -137,7 +136,7 @@
             this.guna2DataGridView1.RowTemplate.Height = 35;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(990, 428);
-            this.guna2DataGridView1.TabIndex = 3;
+            this.guna2DataGridView1.TabIndex = 6;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -180,41 +179,34 @@
             this.dgvId.ReadOnly = true;
             this.dgvId.Visible = false;
             // 
-            // dgvName
+            // dgvDate
             // 
-            this.dgvName.HeaderText = "Name";
-            this.dgvName.MinimumWidth = 6;
-            this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
+            this.dgvDate.HeaderText = "Date";
+            this.dgvDate.MinimumWidth = 100;
+            this.dgvDate.Name = "dgvDate";
+            this.dgvDate.ReadOnly = true;
             // 
-            // dgvUsername
+            // dgvCusID
             // 
-            this.dgvUsername.HeaderText = "Username";
-            this.dgvUsername.MinimumWidth = 6;
-            this.dgvUsername.Name = "dgvUsername";
-            this.dgvUsername.ReadOnly = true;
+            this.dgvCusID.HeaderText = "CusID";
+            this.dgvCusID.MinimumWidth = 6;
+            this.dgvCusID.Name = "dgvCusID";
+            this.dgvCusID.ReadOnly = true;
+            this.dgvCusID.Visible = false;
             // 
-            // dgvPass
+            // dgvCustomer
             // 
-            this.dgvPass.HeaderText = "Password";
-            this.dgvPass.MinimumWidth = 6;
-            this.dgvPass.Name = "dgvPass";
-            this.dgvPass.ReadOnly = true;
-            this.dgvPass.Visible = false;
+            this.dgvCustomer.HeaderText = "Customer";
+            this.dgvCustomer.MinimumWidth = 100;
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
             // 
-            // dgvPhonenumber
+            // dgvAmount
             // 
-            this.dgvPhonenumber.HeaderText = "Phone Number";
-            this.dgvPhonenumber.MinimumWidth = 6;
-            this.dgvPhonenumber.Name = "dgvPhonenumber";
-            this.dgvPhonenumber.ReadOnly = true;
-            // 
-            // dgvRole
-            // 
-            this.dgvRole.HeaderText = "Role";
-            this.dgvRole.MinimumWidth = 6;
-            this.dgvRole.Name = "dgvRole";
-            this.dgvRole.ReadOnly = true;
+            this.dgvAmount.HeaderText = "Amount";
+            this.dgvAmount.MinimumWidth = 100;
+            this.dgvAmount.Name = "dgvAmount";
+            this.dgvAmount.ReadOnly = true;
             // 
             // dgvEdit
             // 
@@ -240,15 +232,15 @@
             this.dgvDel.ReadOnly = true;
             this.dgvDel.Width = 70;
             // 
-            // frmUserView
+            // frmUserViewSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 661);
+            this.ClientSize = new System.Drawing.Size(1075, 641);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Name = "frmUserView";
+            this.Name = "frmUserViewSale";
             this.Text = "frmUserView";
-            this.Load += new System.EventHandler(this.frmUserView_Load);
+            this.Load += new System.EventHandler(this.frmUserViewSale_Load);
             this.Controls.SetChildIndex(this.guna2Panel1, 0);
             this.Controls.SetChildIndex(this.guna2DataGridView1, 0);
             this.guna2Panel1.ResumeLayout(false);
@@ -263,11 +255,10 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvPass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvPhonenumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvRole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCusID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDel;
     }

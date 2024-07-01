@@ -38,6 +38,8 @@
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 176);
+            this.label2.Location = new System.Drawing.Point(47, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 2;
@@ -59,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 176);
+            this.label3.Location = new System.Drawing.Point(356, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 4;
@@ -68,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 300);
+            this.label4.Location = new System.Drawing.Point(44, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 23);
             this.label4.TabIndex = 6;
@@ -77,7 +79,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(364, 300);
+            this.label5.Location = new System.Drawing.Point(353, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 23);
             this.label5.TabIndex = 8;
@@ -128,7 +130,7 @@
             this.txtPass.FocusedState.Parent = this.txtPass;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtPass.HoverState.Parent = this.txtPass;
-            this.txtPass.Location = new System.Drawing.Point(42, 336);
+            this.txtPass.Location = new System.Drawing.Point(31, 262);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4, 13, 4, 13);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '\0';
@@ -156,7 +158,7 @@
             this.txtPhone.FocusedState.Parent = this.txtPhone;
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtPhone.HoverState.Parent = this.txtPhone;
-            this.txtPhone.Location = new System.Drawing.Point(357, 336);
+            this.txtPhone.Location = new System.Drawing.Point(346, 262);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 19, 4, 19);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -182,7 +184,7 @@
             this.txtName.FocusedState.Parent = this.txtName;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(42, 214);
+            this.txtName.Location = new System.Drawing.Point(34, 161);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 27, 4, 27);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -209,7 +211,7 @@
             this.txtUser.FocusedState.Parent = this.txtUser;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtUser.HoverState.Parent = this.txtUser;
-            this.txtUser.Location = new System.Drawing.Point(357, 214);
+            this.txtUser.Location = new System.Drawing.Point(349, 161);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 39, 4, 39);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
@@ -221,11 +223,44 @@
             this.txtUser.Tag = "v";
             this.txtUser.TextOffset = new System.Drawing.Point(10, 0);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 334);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 29);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Role";
+            // 
+            // cbRole
+            // 
+            this.cbRole.Animated = true;
+            this.cbRole.AutoRoundedCorners = true;
+            this.cbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cbRole.BorderRadius = 17;
+            this.cbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRole.FocusedColor = System.Drawing.Color.Empty;
+            this.cbRole.FocusedState.Parent = this.cbRole;
+            this.cbRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.HoverState.Parent = this.cbRole;
+            this.cbRole.ItemHeight = 30;
+            this.cbRole.ItemsAppearance.Parent = this.cbRole;
+            this.cbRole.Location = new System.Drawing.Point(34, 394);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.ShadowDecoration.Parent = this.cbRole;
+            this.cbRole.Size = new System.Drawing.Size(283, 36);
+            this.cbRole.TabIndex = 16;
+            // 
             // frmUserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 589);
+            this.Controls.Add(this.cbRole);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtPass);
@@ -249,6 +284,8 @@
             this.Controls.SetChildIndex(this.txtPass, 0);
             this.Controls.SetChildIndex(this.txtName, 0);
             this.Controls.SetChildIndex(this.txtUser, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.cbRole, 0);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,5 +304,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtPhone;
         public Guna.UI2.WinForms.Guna2TextBox txtName;
         public Guna.UI2.WinForms.Guna2TextBox txtUser;
+        private System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2ComboBox cbRole;
     }
 }

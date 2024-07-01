@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using POS_system.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,22 +11,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS_system.View
+namespace POS_system.User
 {
-    public partial class frmUserView : SampleView
+    public partial class frmUserViewSale : SampleView
     {
-        public frmUserView()
+        public frmUserViewSale()
         {
             InitializeComponent();
         }
-        private void frmUserView_Load(object sender, EventArgs e)
+
+        private void frmUserViewSale_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
         public override void btnAdd_Click(object sender, EventArgs e)
         {
-            MainClass.BlurBlackground(new frmUserAdd());
+            MainClass.BlurBlackground(new frmSaleAdd());
             LoadData();
         }
 
@@ -39,14 +41,18 @@ namespace POS_system.View
             ListBox lb = new ListBox();
             lb.Items.Clear();
             lb.Items.Add(dgvId);
-            lb.Items.Add(dgvName);
-            lb.Items.Add(dgvUsername);
-            lb.Items.Add(dgvPass);
-            lb.Items.Add(dgvPhonenumber);
-            lb.Items.Add(dgvRole);
+            lb.Items.Add(dgvDate);
+            lb.Items.Add(dgvCusID);
+            lb.Items.Add(dgvCustomer);
+            lb.Items.Add(dgvAmount);
 
-            string query = @"select userID, uName, uUsername, uPass, uPhoneNumber, uRole from users 
-                            where uName like '%" + txtSearch.Text + "%' order by userID desc";
+            string query = @"select dmainID, mdate, m.mSupCusID, c.uUsername, SUM(d.amount) as amount
+                            from tblMain m
+                            inner join tblDetails d on d.dMainID = m.MainID
+                            inner join users c on c.userID = m.mSupCusID
+                            where m.mType = 'SAL' and uUsername like '%" + txtSearch.Text + "%'" +
+                            " group by dMainID, mDate, m.mSupCusID, c.uUsername";
+
             MainClass.LoadData(query, guna2DataGridView1, lb);
         }
 
@@ -55,15 +61,9 @@ namespace POS_system.View
             // update
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
-                frmUserAdd frm = new frmUserAdd();
+                frmSaleAdd frm = new frmSaleAdd();
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
-                frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
-                frm.txtUser.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvUsername"].Value);
-                frm.txtPass.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPass"].Value);
-                frm.txtPhone.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPhonenumber"].Value);
-                string roleValue = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvRole"].Value);
-                frm.cbRole.SelectedIndex = frm.cbRole.Items.IndexOf(roleValue);
-
+                frm.cusID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvCusID"].Value);
                 MainClass.BlurBlackground(frm);
                 LoadData();
             }
@@ -71,20 +71,27 @@ namespace POS_system.View
             // Delete
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvDel")
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Are you sure you want to delete?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
-                    string query = "Delete from users where userID = " + id + "";
+                    string query1 = "Delete from tblMain where MainID = " + id + "";
+                    string query2 = "Delete from tblDetails where dMainID = " + id + "";
                     Hashtable ht = new Hashtable();
-                    if (MainClass.SQL(query, ht) > 0)
+                    MainClass.SQL(query1, ht);
+                    if (MainClass.SQL(query2, ht) > 0)
                     {
                         MessageBox.Show("Delete successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadData();
                     }
                 }
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
