@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS_system.View
+namespace POS_system
 {
-    public partial class frmDashBoard : Sample
+    public partial class frmPrint : Sample
     {
-        public frmDashBoard()
+        public frmPrint()
         {
             InitializeComponent();
+        }
+
+        private void frmPrint_Load(object sender, EventArgs e)
+        {
+            btnMax.PerformClick();
         }
     }
 }

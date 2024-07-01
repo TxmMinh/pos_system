@@ -100,10 +100,17 @@ namespace POS_system
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             AddControls(new frmDashboard());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
+=======
+            AddControls(new frmDashBoard());
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+>>>>>>> 83685b7cbf8a050060ebe52b1bba3f15cf886993
         {
             this.Hide();
             frmLogin frm = new frmLogin();

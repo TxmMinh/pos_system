@@ -48,7 +48,10 @@ namespace POS_system
                             byte[] imageByteArray = imageArray;
                             MainClass.setImage(Image.FromStream(new MemoryStream(imageArray)));
                             MainClass.setUser(dt.Rows[0]["uUsername"].ToString());
+<<<<<<< HEAD
                             MainClass.setUserID(Convert.ToInt32(dt.Rows[0]["userID"]));
+=======
+>>>>>>> 83685b7cbf8a050060ebe52b1bba3f15cf886993
                         }
                     }
                 }
