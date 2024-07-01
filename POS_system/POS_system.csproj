@@ -386,5 +386,8 @@
   <ItemGroup>
     <None Include="Resources\622414_buy_cart_shopping_basket_ecommerce_icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\728935_exit_left_logout_arrow_move_icon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

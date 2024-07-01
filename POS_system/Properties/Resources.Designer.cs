@@ -253,6 +253,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _728935_exit_left_logout_arrow_move_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("728935_exit_left_logout_arrow_move_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7548789_user_interface_person_avatar_customer_icon {
             get {
                 object obj = ResourceManager.GetObject("7548789_user_interface_person_avatar_customer_icon", resourceCulture);
