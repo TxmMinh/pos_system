@@ -72,3 +72,4 @@ E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\Debug\POS_system.User.frmUserReceipt.resources
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\Debug\POS_system.View.frmReport.resources
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\Debug\POS_system.View.frmReportStock.resources
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\Debug\POS_system.View.frmSaleReport.resources

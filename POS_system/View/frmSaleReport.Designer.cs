@@ -1,6 +1,6 @@
 ﻿namespace POS_system.View
 {
-    partial class frmReportStock
+    partial class frmSaleReport
     {
         /// <summary>
         /// Required designer variable.
@@ -31,31 +31,50 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCustomerOrUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Controls.Add(this.txtSearch2);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.txtToDate);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.txtFromDate);
+            this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.btnClose);
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1173, 158);
+            this.guna2Panel1.Size = new System.Drawing.Size(1218, 217);
             this.guna2Panel1.Controls.SetChildIndex(this.label1, 0);
             this.guna2Panel1.Controls.SetChildIndex(this.label2, 0);
             this.guna2Panel1.Controls.SetChildIndex(this.btnAdd, 0);
             this.guna2Panel1.Controls.SetChildIndex(this.txtSearch, 0);
             this.guna2Panel1.Controls.SetChildIndex(this.btnClose, 0);
-            this.guna2Panel1.Controls.SetChildIndex(this.txtSearch2, 0);
+            this.guna2Panel1.Controls.SetChildIndex(this.label4, 0);
+            this.guna2Panel1.Controls.SetChildIndex(this.txtFromDate, 0);
+            this.guna2Panel1.Controls.SetChildIndex(this.label3, 0);
+            this.guna2Panel1.Controls.SetChildIndex(this.txtToDate, 0);
+            this.guna2Panel1.Controls.SetChildIndex(this.guna2Button1, 0);
             // 
             // btnAdd
             // 
@@ -70,13 +89,9 @@
             this.btnAdd.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.None;
             this.btnAdd.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.Size = new System.Drawing.Size(170, 32);
-            this.label1.Text = "Stock Quantity";
-            // 
             // txtSearch
             // 
+            this.txtSearch.BorderRadius = 18;
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -86,14 +101,38 @@
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(2176, 86);
+            this.txtSearch.Location = new System.Drawing.Point(1639, 154);
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(418, 45);
+            this.txtSearch.Size = new System.Drawing.Size(456, 38);
+            this.txtSearch.Visible = false;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(2189, 46);
+            this.label2.Location = new System.Drawing.Point(1707, 108);
+            this.label2.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Animated = true;
+            this.btnClose.AutoRoundedCorners = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 26;
+            this.btnClose.CheckedState.Parent = this.btnClose;
+            this.btnClose.CustomImages.Parent = this.btnClose;
+            this.btnClose.FillColor = System.Drawing.Color.Crimson;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.Location = new System.Drawing.Point(1026, 37);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(153, 54);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2DataGridView1
             // 
@@ -120,10 +159,13 @@
             this.guna2DataGridView1.ColumnHeadersHeight = 35;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSr,
-            this.dgvId,
             this.dgvName,
+            this.dgvDate,
+            this.dgvCustomerOrUser,
+            this.dgvQuantity,
             this.dgvCost,
-            this.dgvSale});
+            this.dgvSale,
+            this.dgvProfit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,15 +176,15 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(23, 174);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(36, 235);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 35;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1125, 552);
-            this.guna2DataGridView1.TabIndex = 7;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1143, 533);
+            this.guna2DataGridView1.TabIndex = 8;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -176,20 +218,33 @@
             this.dgvSr.ReadOnly = true;
             this.dgvSr.Width = 70;
             // 
-            // dgvId
-            // 
-            this.dgvId.HeaderText = "ID";
-            this.dgvId.MinimumWidth = 6;
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
-            this.dgvId.Visible = false;
-            // 
             // dgvName
             // 
             this.dgvName.HeaderText = "Product Name";
             this.dgvName.MinimumWidth = 6;
             this.dgvName.Name = "dgvName";
             this.dgvName.ReadOnly = true;
+            // 
+            // dgvDate
+            // 
+            this.dgvDate.HeaderText = "Date";
+            this.dgvDate.MinimumWidth = 6;
+            this.dgvDate.Name = "dgvDate";
+            this.dgvDate.ReadOnly = true;
+            // 
+            // dgvCustomerOrUser
+            // 
+            this.dgvCustomerOrUser.HeaderText = "Customer";
+            this.dgvCustomerOrUser.MinimumWidth = 6;
+            this.dgvCustomerOrUser.Name = "dgvCustomerOrUser";
+            this.dgvCustomerOrUser.ReadOnly = true;
+            // 
+            // dgvQuantity
+            // 
+            this.dgvQuantity.HeaderText = "Quantity";
+            this.dgvQuantity.MinimumWidth = 6;
+            this.dgvQuantity.Name = "dgvQuantity";
+            this.dgvQuantity.ReadOnly = true;
             // 
             // dgvCost
             // 
@@ -205,86 +260,170 @@
             this.dgvSale.Name = "dgvSale";
             this.dgvSale.ReadOnly = true;
             // 
-            // btnClose
+            // dgvProfit
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProfit.HeaderText = "Profit";
+            this.dgvProfit.MinimumWidth = 6;
+            this.dgvProfit.Name = "dgvProfit";
+            this.dgvProfit.ReadOnly = true;
+            // 
+            // txtFromDate
+            // 
+            this.txtFromDate.AutoRoundedCorners = true;
+            this.txtFromDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
+            this.txtFromDate.BorderRadius = 16;
+            this.txtFromDate.BorderThickness = 1;
+            this.txtFromDate.CheckedState.Parent = this.txtFromDate;
+            this.txtFromDate.FillColor = System.Drawing.Color.White;
+            this.txtFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFromDate.HoverState.Parent = this.txtFromDate;
+            this.txtFromDate.Location = new System.Drawing.Point(46, 137);
+            this.txtFromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtFromDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtFromDate.Name = "txtFromDate";
+            this.txtFromDate.ShadowDecoration.Parent = this.txtFromDate;
+            this.txtFromDate.Size = new System.Drawing.Size(247, 34);
+            this.txtFromDate.TabIndex = 27;
+            this.txtFromDate.Value = new System.DateTime(2024, 6, 30, 16, 57, 42, 251);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(59, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "From Date";
+            // 
+            // txtToDate
+            // 
+            this.txtToDate.AutoRoundedCorners = true;
+            this.txtToDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
+            this.txtToDate.BorderRadius = 16;
+            this.txtToDate.BorderThickness = 1;
+            this.txtToDate.CheckedState.Parent = this.txtToDate;
+            this.txtToDate.FillColor = System.Drawing.Color.White;
+            this.txtToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtToDate.HoverState.Parent = this.txtToDate;
+            this.txtToDate.Location = new System.Drawing.Point(342, 137);
+            this.txtToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtToDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtToDate.Name = "txtToDate";
+            this.txtToDate.ShadowDecoration.Parent = this.txtToDate;
+            this.txtToDate.Size = new System.Drawing.Size(247, 34);
+            this.txtToDate.TabIndex = 29;
+            this.txtToDate.Value = new System.DateTime(2024, 6, 30, 16, 57, 42, 251);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(355, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 23);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "To Date";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Animated = true;
-            this.btnClose.AutoRoundedCorners = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderRadius = 26;
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
-            this.btnClose.FillColor = System.Drawing.Color.Crimson;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Location = new System.Drawing.Point(959, 37);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(189, 54);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 26;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(675, 117);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(153, 54);
+            this.guna2Button1.TabIndex = 30;
+            this.guna2Button1.Text = "Search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // txtSearch2
+            // guna2Panel3
             // 
-            this.txtSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtSearch2.AutoRoundedCorners = true;
-            this.txtSearch2.BorderRadius = 28;
-            this.txtSearch2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch2.DefaultText = "";
-            this.txtSearch2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch2.DisabledState.Parent = this.txtSearch2;
-            this.txtSearch2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch2.FocusedState.Parent = this.txtSearch2;
-            this.txtSearch2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch2.HoverState.Parent = this.txtSearch2;
-            this.txtSearch2.IconLeft = global::POS_system.Properties.Resources._115695_magnifying_glass_zoom_find_search_icon;
-            this.txtSearch2.Location = new System.Drawing.Point(32, 86);
-            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4, 39, 4, 39);
-            this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.PasswordChar = '\0';
-            this.txtSearch2.PlaceholderText = "Search Here";
-            this.txtSearch2.SelectedText = "";
-            this.txtSearch2.ShadowDecoration.Parent = this.txtSearch2;
-            this.txtSearch2.Size = new System.Drawing.Size(658, 59);
-            this.txtSearch2.TabIndex = 6;
-            this.txtSearch2.TextOffset = new System.Drawing.Point(5, 0);
-            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            this.guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Panel3.BorderRadius = 10;
+            this.guna2Panel3.Controls.Add(this.labelTotal);
+            this.guna2Panel3.Controls.Add(this.label5);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(675, 774);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(504, 70);
+            this.guna2Panel3.TabIndex = 48;
             // 
-            // frmReportStock
+            // labelTotal
+            // 
+            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotal.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.ForeColor = System.Drawing.Color.White;
+            this.labelTotal.Location = new System.Drawing.Point(196, 16);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(136, 32);
+            this.labelTotal.TabIndex = 1;
+            this.labelTotal.Text = "0.00";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 32);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Grand Total";
+            // 
+            // frmSaleReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1173, 749);
+            this.ClientSize = new System.Drawing.Size(1218, 855);
+            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Name = "frmReportStock";
-            this.Text = "frmReportStock";
-            this.Load += new System.EventHandler(this.frmReportStock_Load);
-            this.Controls.SetChildIndex(this.guna2Panel1, 0);
+            this.Name = "frmSaleReport";
+            this.Text = "frmSaleReport";
+            this.Load += new System.EventHandler(this.frmSaleReport_Load);
             this.Controls.SetChildIndex(this.guna2DataGridView1, 0);
+            this.Controls.SetChildIndex(this.guna2Panel3, 0);
+            this.Controls.SetChildIndex(this.guna2Panel1, 0);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtToDate;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtFromDate;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCustomerOrUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSale;
-        private Guna.UI2.WinForms.Guna2Button btnClose;
-        public Guna.UI2.WinForms.Guna2TextBox txtSearch2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProfit;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label label5;
     }
 }

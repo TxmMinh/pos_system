@@ -177,7 +177,7 @@ namespace POS_system.Model
 
             SqlCommand cmd1 = new SqlCommand(query1, MainClass.con);
             cmd1.Parameters.AddWithValue("@id", mainID);
-            cmd1.Parameters.AddWithValue("@date", Convert.ToDateTime(txtDate.Value).Date);
+            cmd1.Parameters.AddWithValue("@date", Convert.ToDateTime(txtDate.Value));
             cmd1.Parameters.AddWithValue("@type", "PUR");
             cmd1.Parameters.AddWithValue("@supID", Convert.ToInt32(cbSupplier.SelectedValue));
             if (MainClass.con.State == ConnectionState.Closed)

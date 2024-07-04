@@ -22,5 +22,11 @@ namespace POS_system.View
             frmReportStock frm = new frmReportStock();
             frm.ShowDialog();
         }
+
+        private void btnSaleReport_Click(object sender, EventArgs e)
+        {
+            frmSaleReport frm = new frmSaleReport();
+            frm.ShowDialog();
+        }
     }
 }

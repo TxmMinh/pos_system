@@ -206,6 +206,12 @@
     <Compile Include="View\frmReportStock.Designer.cs">
       <DependentUpon>frmReportStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmSaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSaleReport.Designer.cs">
+      <DependentUpon>frmSaleReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmSaleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmReportStock.resx">
       <DependentUpon>frmReportStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSaleReport.resx">
+      <DependentUpon>frmSaleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmSaleView.resx">
       <DependentUpon>frmSaleView.cs</DependentUpon>

@@ -98,6 +98,7 @@
             this.btnSaleReport.Size = new System.Drawing.Size(221, 64);
             this.btnSaleReport.TabIndex = 48;
             this.btnSaleReport.Text = "Sales Report";
+            this.btnSaleReport.Click += new System.EventHandler(this.btnSaleReport_Click);
             // 
             // guna2Panel1
             // 
