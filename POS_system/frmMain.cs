@@ -114,5 +114,10 @@ namespace POS_system
             frmLogin frm = new frmLogin();
             frm.Show();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmReport());
+        }
     }
 }

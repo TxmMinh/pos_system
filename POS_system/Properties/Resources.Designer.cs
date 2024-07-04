@@ -103,6 +103,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1564501_business_chart_dashboard_graph_icon {
+            get {
+                object obj = ResourceManager.GetObject("1564501_business_chart_dashboard_graph_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1564535_customer_user_userphoto_account_person_icon {
             get {
                 object obj = ResourceManager.GetObject("1564535_customer_user_userphoto_account_person_icon", resourceCulture);

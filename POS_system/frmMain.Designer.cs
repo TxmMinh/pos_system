@@ -33,6 +33,7 @@
             this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,7 @@
             this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1187, 12);
+            this.btnExit.Location = new System.Drawing.Point(1215, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(45, 29);
@@ -71,7 +72,7 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1085, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1113, 12);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
@@ -84,7 +85,7 @@
             this.btnMax.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btnMax.HoverState.Parent = this.btnMax;
             this.btnMax.IconColor = System.Drawing.Color.White;
-            this.btnMax.Location = new System.Drawing.Point(1136, 12);
+            this.btnMax.Location = new System.Drawing.Point(1164, 12);
             this.btnMax.Name = "btnMax";
             this.btnMax.ShadowDecoration.Parent = this.btnMax;
             this.btnMax.Size = new System.Drawing.Size(45, 29);
@@ -100,11 +101,12 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1244, 61);
+            this.guna2Panel1.Size = new System.Drawing.Size(1272, 61);
             this.guna2Panel1.TabIndex = 3;
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.btnReport);
             this.guna2Panel2.Controls.Add(this.btnLogout);
             this.guna2Panel2.Controls.Add(this.btnSupplier);
             this.guna2Panel2.Controls.Add(this.btnUser);
@@ -121,8 +123,32 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 61);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(235, 680);
+            this.guna2Panel2.Size = new System.Drawing.Size(235, 776);
             this.guna2Panel2.TabIndex = 4;
+            // 
+            // btnReport
+            // 
+            this.btnReport.AutoRoundedCorners = true;
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnReport.BorderRadius = 21;
+            this.btnReport.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnReport.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnReport.CheckedState.Parent = this.btnReport;
+            this.btnReport.CustomImages.Parent = this.btnReport;
+            this.btnReport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.HoverState.Parent = this.btnReport;
+            this.btnReport.Image = global::POS_system.Properties.Resources._1564501_business_chart_dashboard_graph_icon;
+            this.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReport.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnReport.Location = new System.Drawing.Point(29, 605);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.ShadowDecoration.Parent = this.btnReport;
+            this.btnReport.Size = new System.Drawing.Size(180, 45);
+            this.btnReport.TabIndex = 18;
+            this.btnReport.Text = "Report";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnLogout
             // 
@@ -140,7 +166,7 @@
             this.btnLogout.Image = global::POS_system.Properties.Resources._728935_exit_left_logout_arrow_move_icon1;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnLogout.Location = new System.Drawing.Point(29, 605);
+            this.btnLogout.Location = new System.Drawing.Point(29, 708);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(180, 45);
@@ -369,7 +395,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(235, 61);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1009, 680);
+            this.guna2Panel3.Size = new System.Drawing.Size(1037, 776);
             this.guna2Panel3.TabIndex = 4;
             // 
             // CenterPanel
@@ -380,14 +406,14 @@
             this.CenterPanel.Location = new System.Drawing.Point(241, 67);
             this.CenterPanel.Name = "CenterPanel";
             this.CenterPanel.ShadowDecoration.Parent = this.CenterPanel;
-            this.CenterPanel.Size = new System.Drawing.Size(1000, 674);
+            this.CenterPanel.Size = new System.Drawing.Size(1028, 770);
             this.CenterPanel.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 741);
+            this.ClientSize = new System.Drawing.Size(1272, 837);
             this.Controls.Add(this.CenterPanel);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
@@ -424,5 +450,6 @@
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnReport;
     }
 }

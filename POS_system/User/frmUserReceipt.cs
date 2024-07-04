@@ -34,8 +34,7 @@ namespace POS_system.User
                 LoadForReceipt();
                 GrandTotal();
                 txtDate.Text = date.ToString();
-            }
-             
+            }             
         }
 
         private void GrandTotal()

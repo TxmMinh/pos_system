@@ -194,6 +194,18 @@
     <Compile Include="View\frmPurchaseView.Designer.cs">
       <DependentUpon>frmPurchaseView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmReportStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmReportStock.Designer.cs">
+      <DependentUpon>frmReportStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmSaleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPurchaseView.resx">
       <DependentUpon>frmPurchaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmReportStock.resx">
+      <DependentUpon>frmReportStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmSaleView.resx">
       <DependentUpon>frmSaleView.cs</DependentUpon>
@@ -400,6 +418,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564501_business_chart_dashboard_graph_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
