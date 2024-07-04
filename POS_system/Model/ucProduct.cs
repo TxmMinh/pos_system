@@ -44,5 +44,9 @@ namespace POS_system.Model
             set { txtPic.Image = value; }
         }
 
+        private void lblPName_Click(object sender, EventArgs e)
+        {
+            onSelect?.Invoke(this, e);
+        }
     }
 }

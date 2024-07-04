@@ -67,6 +67,7 @@
             this.lblPName.TabIndex = 0;
             this.lblPName.Text = "Product Name";
             this.lblPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPName.Click += new System.EventHandler(this.lblPName_Click);
             // 
             // txtPic
             // 

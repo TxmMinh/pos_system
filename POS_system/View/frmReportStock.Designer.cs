@@ -86,14 +86,14 @@
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(2176, 86);
+            this.txtSearch.Location = new System.Drawing.Point(2417, 86);
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(418, 45);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(2189, 46);
+            this.label2.Location = new System.Drawing.Point(2430, 46);
             // 
             // guna2DataGridView1
             // 
@@ -232,7 +232,7 @@
             this.txtSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch2.AutoRoundedCorners = true;
-            this.txtSearch2.BorderRadius = 28;
+            this.txtSearch2.BorderRadius = 20;
             this.txtSearch2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch2.DefaultText = "";
             this.txtSearch2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -245,14 +245,14 @@
             this.txtSearch2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch2.HoverState.Parent = this.txtSearch2;
             this.txtSearch2.IconLeft = global::POS_system.Properties.Resources._115695_magnifying_glass_zoom_find_search_icon;
-            this.txtSearch2.Location = new System.Drawing.Point(32, 86);
-            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4, 39, 4, 39);
+            this.txtSearch2.Location = new System.Drawing.Point(46, 86);
+            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4, 56, 4, 56);
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.PasswordChar = '\0';
             this.txtSearch2.PlaceholderText = "Search Here";
             this.txtSearch2.SelectedText = "";
             this.txtSearch2.ShadowDecoration.Parent = this.txtSearch2;
-            this.txtSearch2.Size = new System.Drawing.Size(658, 59);
+            this.txtSearch2.Size = new System.Drawing.Size(740, 43);
             this.txtSearch2.TabIndex = 6;
             this.txtSearch2.TextOffset = new System.Drawing.Point(5, 0);
             this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);

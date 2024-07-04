@@ -38,6 +38,119 @@ namespace POS_system.Model
             LoadProductsFromDatebase();
         }
 
+        /*        private bool CheckProductQuantity(string PName)
+                {
+                    bool hasData = false;
+
+
+                    string query = @"
+                                    WITH InventoryMovement AS(
+                                        SELECT
+                                            d.productID,
+                                            SUM(CASE WHEN d.price IS NULL THEN d.quantity ELSE 0 END) AS QuantityIn,
+                                            SUM(CASE WHEN d.cost IS NULL THEN d.quantity ELSE 0 END) AS QuantityOut
+                                        FROM
+                                            tblDetails d
+                                        GROUP BY
+                                            d.productID
+                                    )               
+                                    SELECT
+                                        p.proID,
+                                        p.pName,
+                                        p.pCost,
+                                        p.pPrice,
+                                        ISNULL(im.QuantityIn, 0) - ISNULL(im.QuantityOut, 0) AS Quantity
+                                    FROM
+                                        Product p
+                                    LEFT JOIN
+                                        InventoryMovement im ON p.proID = im.productID
+                                    WHERE
+                                        p.pName LIKE @PName AND (ISNULL(im.QuantityIn, 0) - ISNULL(im.QuantityOut, 0)) > 0
+                                    ORDER BY
+                                        p.proID DESC";
+
+                    using (SqlConnection connection = new SqlConnection(MainClass.con_string))
+                    {
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@PName", PName);
+
+                        try
+                        {
+                            connection.Open();
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            // Nếu có bất kỳ dòng dữ liệu nào trả về, set hasData thành true
+                            if (reader.HasRows)
+                            {
+                                hasData = true;
+                            }
+                            reader.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                    }
+
+                    return hasData;
+
+                }
+        */
+
+        private int CheckProductQuantity(string PName)
+        {
+            int quantityProduct = 0;  
+
+            string query = @"
+                    WITH InventoryMovement AS(
+                        SELECT
+                            d.productID,
+                            SUM(CASE WHEN d.price IS NULL THEN d.quantity ELSE 0 END) AS QuantityIn,
+                            SUM(CASE WHEN d.cost IS NULL THEN d.quantity ELSE 0 END) AS QuantityOut
+                        FROM
+                            tblDetails d
+                        GROUP BY
+                            d.productID
+                    )               
+                    SELECT
+                        ISNULL(im.QuantityIn, 0) - ISNULL(im.QuantityOut, 0) AS Quantity
+                    FROM
+                        Product p
+                    LEFT JOIN
+                        InventoryMovement im ON p.proID = im.productID
+                    WHERE
+                        p.pName LIKE @PName AND (ISNULL(im.QuantityIn, 0) - ISNULL(im.QuantityOut, 0)) > 0
+                    ORDER BY
+                        p.proID DESC";
+
+            using (SqlConnection connection = new SqlConnection(MainClass.con_string))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PName", "%" + PName + "%");
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            quantityProduct = reader.GetInt32(reader.GetOrdinal("Quantity"));
+                        }
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return quantityProduct;
+        }
+
         public void AddItems(String id, string name, string price, Image pImage, string cost)
         {
             var w = new ucProduct()
@@ -53,16 +166,29 @@ namespace POS_system.Model
 
             w.onSelect += (ss, ee) =>
             {
+                if (CheckProductQuantity(name) <= 0)
+                {
+                    MessageBox.Show("Product is out of stock", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 var wdg = (ucProduct)ss;
                 foreach (DataGridViewRow item in guna2DataGridView1.Rows)
                 {
                     if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
                     {
-                        item.Cells["dgvQuantity"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) + 1;
-                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) *
-                                                        int.Parse(item.Cells["dgvPrice"].Value.ToString());
-                        GrandTotal();
-                        return;
+                        if (CheckProductQuantity(name) < int.Parse(item.Cells["dgvQuantity"].Value.ToString()) + 1)
+                        {
+                            MessageBox.Show("Product is out of stock", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+
+                        } else {
+                            item.Cells["dgvQuantity"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) + 1;
+                            item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) *
+                                                            int.Parse(item.Cells["dgvPrice"].Value.ToString());
+                            GrandTotal();
+                            return;
+                        }
                     }
                 }
 
@@ -299,6 +425,11 @@ namespace POS_system.Model
 
                 }
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
