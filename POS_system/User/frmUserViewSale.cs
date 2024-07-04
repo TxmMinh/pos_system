@@ -51,6 +51,7 @@ namespace POS_system.User
                             inner join tblDetails d on d.dMainID = m.MainID
                             inner join users c on c.userID = m.mUserID
                             where m.mType = 'SAL' and uUsername like '%" + txtSearch.Text + "%'" +
+                            " and c.userID = " + MainClass.userID + 
                             " group by dMainID, mDate, m.mUserID, c.uUsername";
 
             MainClass.LoadData(query, guna2DataGridView1, lb);
@@ -91,6 +92,11 @@ namespace POS_system.User
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

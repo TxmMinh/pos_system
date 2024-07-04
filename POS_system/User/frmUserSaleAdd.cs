@@ -27,6 +27,8 @@ namespace POS_system.User
 
         private void frmUserSaleAdd_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now;  
+            txtDate.Text = date.ToString("yyyy-MM-dd");
             string query = @"select userID 'id', uUserName 'name' from users";
             MainClass.CBFill(query, cbCustomer);
 

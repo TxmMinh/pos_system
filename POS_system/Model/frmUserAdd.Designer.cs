@@ -42,6 +42,8 @@
             this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.Address = new System.Windows.Forms.Label();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,15 +290,53 @@
             this.Address.AutoSize = true;
             this.Address.Location = new System.Drawing.Point(366, 334);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(88, 29);
+            this.Address.Size = new System.Drawing.Size(70, 23);
             this.Address.TabIndex = 17;
             this.Address.Text = "Address";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.AutoRoundedCorners = true;
+            this.txtEmail.BorderRadius = 23;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.Parent = this.txtEmail;
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.txtEmail.FocusedState.Parent = this.txtEmail;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.txtEmail.HoverState.Parent = this.txtEmail;
+            this.txtEmail.Location = new System.Drawing.Point(34, 482);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 56, 4, 56);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
+            this.txtEmail.Size = new System.Drawing.Size(289, 49);
+            this.txtEmail.TabIndex = 20;
+            this.txtEmail.Tag = "v";
+            this.txtEmail.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(47, 449);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 23);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Email";
             // 
             // frmUserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 589);
+            this.ClientSize = new System.Drawing.Size(999, 706);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.cbRole);
@@ -328,6 +368,8 @@
             this.Controls.SetChildIndex(this.cbRole, 0);
             this.Controls.SetChildIndex(this.Address, 0);
             this.Controls.SetChildIndex(this.txtAddress, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.txtEmail, 0);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -350,5 +392,7 @@
         public Guna.UI2.WinForms.Guna2ComboBox cbRole;
         public Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label Address;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private System.Windows.Forms.Label label7;
     }
 }

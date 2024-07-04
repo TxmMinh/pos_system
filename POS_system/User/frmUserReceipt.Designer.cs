@@ -35,14 +35,6 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvproid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +49,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnSendEmail = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvproid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -128,8 +128,7 @@
             this.dgvProduct,
             this.dgvQuantity,
             this.dgvPrice,
-            this.dgvAmount,
-            this.dgvCost});
+            this.dgvAmount});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,74 +171,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
-            // 
-            // dgvSr
-            // 
-            this.dgvSr.FillWeight = 30F;
-            this.dgvSr.HeaderText = "Sr#";
-            this.dgvSr.MinimumWidth = 30;
-            this.dgvSr.Name = "dgvSr";
-            this.dgvSr.ReadOnly = true;
-            // 
-            // dgvId
-            // 
-            this.dgvId.HeaderText = "ID";
-            this.dgvId.MinimumWidth = 6;
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
-            this.dgvId.Visible = false;
-            // 
-            // dgvproid
-            // 
-            this.dgvproid.HeaderText = "proid";
-            this.dgvproid.MinimumWidth = 6;
-            this.dgvproid.Name = "dgvproid";
-            this.dgvproid.ReadOnly = true;
-            this.dgvproid.Visible = false;
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvProduct.HeaderText = "Product";
-            this.dgvProduct.MinimumWidth = 100;
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.ReadOnly = true;
-            // 
-            // dgvQuantity
-            // 
-            this.dgvQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvQuantity.FillWeight = 75F;
-            this.dgvQuantity.HeaderText = "Quantity";
-            this.dgvQuantity.MinimumWidth = 75;
-            this.dgvQuantity.Name = "dgvQuantity";
-            this.dgvQuantity.ReadOnly = true;
-            this.dgvQuantity.Width = 75;
-            // 
-            // dgvPrice
-            // 
-            this.dgvPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvPrice.HeaderText = "Price";
-            this.dgvPrice.MinimumWidth = 100;
-            this.dgvPrice.Name = "dgvPrice";
-            this.dgvPrice.ReadOnly = true;
-            this.dgvPrice.Width = 125;
-            // 
-            // dgvAmount
-            // 
-            this.dgvAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvAmount.HeaderText = "Amount";
-            this.dgvAmount.MinimumWidth = 100;
-            this.dgvAmount.Name = "dgvAmount";
-            this.dgvAmount.ReadOnly = true;
-            this.dgvAmount.Width = 125;
-            // 
-            // dgvCost
-            // 
-            this.dgvCost.HeaderText = "Cost";
-            this.dgvCost.MinimumWidth = 6;
-            this.dgvCost.Name = "dgvCost";
-            this.dgvCost.ReadOnly = true;
-            this.dgvCost.Visible = false;
             // 
             // guna2Panel2
             // 
@@ -292,10 +223,10 @@
             this.guna2Panel3.Controls.Add(this.labelTotal);
             this.guna2Panel3.Controls.Add(this.label4);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(110, 751);
+            this.guna2Panel3.Location = new System.Drawing.Point(303, 751);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(771, 70);
+            this.guna2Panel3.Size = new System.Drawing.Size(628, 70);
             this.guna2Panel3.TabIndex = 47;
             // 
             // labelTotal
@@ -463,11 +394,92 @@
             this.txtDate.Tag = "v";
             this.txtDate.Value = new System.DateTime(2024, 6, 30, 16, 57, 42, 251);
             // 
+            // btnSendEmail
+            // 
+            this.btnSendEmail.Animated = true;
+            this.btnSendEmail.AutoRoundedCorners = true;
+            this.btnSendEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendEmail.BorderRadius = 21;
+            this.btnSendEmail.CheckedState.Parent = this.btnSendEmail;
+            this.btnSendEmail.CustomImages.Parent = this.btnSendEmail;
+            this.btnSendEmail.FillColor = System.Drawing.Color.Crimson;
+            this.btnSendEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSendEmail.ForeColor = System.Drawing.Color.White;
+            this.btnSendEmail.HoverState.Parent = this.btnSendEmail;
+            this.btnSendEmail.Location = new System.Drawing.Point(57, 754);
+            this.btnSendEmail.Name = "btnSendEmail";
+            this.btnSendEmail.ShadowDecoration.Parent = this.btnSendEmail;
+            this.btnSendEmail.Size = new System.Drawing.Size(109, 45);
+            this.btnSendEmail.TabIndex = 56;
+            this.btnSendEmail.Text = "Send Email";
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
+            // 
+            // dgvSr
+            // 
+            this.dgvSr.FillWeight = 30F;
+            this.dgvSr.HeaderText = "Sr#";
+            this.dgvSr.MinimumWidth = 30;
+            this.dgvSr.Name = "dgvSr";
+            this.dgvSr.ReadOnly = true;
+            // 
+            // dgvId
+            // 
+            this.dgvId.HeaderText = "ID";
+            this.dgvId.MinimumWidth = 6;
+            this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
+            this.dgvId.Visible = false;
+            // 
+            // dgvproid
+            // 
+            this.dgvproid.HeaderText = "proid";
+            this.dgvproid.MinimumWidth = 6;
+            this.dgvproid.Name = "dgvproid";
+            this.dgvproid.ReadOnly = true;
+            this.dgvproid.Visible = false;
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvProduct.HeaderText = "Product";
+            this.dgvProduct.MinimumWidth = 100;
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            // 
+            // dgvQuantity
+            // 
+            this.dgvQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvQuantity.FillWeight = 75F;
+            this.dgvQuantity.HeaderText = "Quantity";
+            this.dgvQuantity.MinimumWidth = 75;
+            this.dgvQuantity.Name = "dgvQuantity";
+            this.dgvQuantity.ReadOnly = true;
+            this.dgvQuantity.Width = 75;
+            // 
+            // dgvPrice
+            // 
+            this.dgvPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvPrice.HeaderText = "Price";
+            this.dgvPrice.MinimumWidth = 100;
+            this.dgvPrice.Name = "dgvPrice";
+            this.dgvPrice.ReadOnly = true;
+            this.dgvPrice.Width = 125;
+            // 
+            // dgvAmount
+            // 
+            this.dgvAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvAmount.HeaderText = "Amount";
+            this.dgvAmount.MinimumWidth = 100;
+            this.dgvAmount.Name = "dgvAmount";
+            this.dgvAmount.ReadOnly = true;
+            this.dgvAmount.Width = 125;
+            // 
             // frmUserReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 844);
+            this.Controls.Add(this.btnSendEmail);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAddress);
@@ -512,6 +524,9 @@
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDate;
+        private Guna.UI2.WinForms.Guna2Button btnSendEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvproid;
@@ -519,8 +534,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2DateTimePicker txtDate;
     }
 }

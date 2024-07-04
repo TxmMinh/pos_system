@@ -1,17 +1,13 @@
 ﻿using POS_system.Model;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace POS_system.User
 {
@@ -25,6 +21,7 @@ namespace POS_system.User
         public int id = 0;
         public int cusID = MainClass.USERID;
         public DateTime date;
+        public string email;
 
         private void frmUserReceipt_Load(object sender, EventArgs e)
         {
@@ -99,6 +96,7 @@ namespace POS_system.User
                 txtUsername.Text = row["uUsername"].ToString();
                 txtPhone.Text = row["uPhoneNumber"].ToString();
                 txtAddress.Text = row["uAddress"].ToString();
+                email = row["uEmail"].ToString();
             }
         }
 
@@ -109,7 +107,92 @@ namespace POS_system.User
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string pdfPath = GenerateReceiptPdf();
+                SendEmail(txtUsername.Text, email, pdfPath);
+                MessageBox.Show("Receipt sent successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error sending receipt: " + ex.Message);
+            }
+        }
+
+        private string GenerateReceiptPdf()
+        {
+            string fileName = $"Receipt_{DateTime.Now:yyyyMMddHHmmss}.pdf";
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), fileName);
+
+            Document document = new Document();
+            PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+            document.Open();
+
+            // Thêm tiêu đề
+            var titleFont = FontFactory.GetFont("HELVETICA", 18, iTextSharp.text.Font.BOLD);
+            document.Add(new Paragraph("Receipt", titleFont));
+            document.Add(new Paragraph($"Date: {date:yyyy-MM-dd}"));
+            document.Add(new Paragraph($"Customer: {txtUsername.Text}"));
+            document.Add(new Paragraph($"Phone number: {txtPhone.Text}"));
+            document.Add(new Paragraph($"Address: {txtAddress.Text}"));
+            document.Add(new Paragraph("\n"));
+
+            // Thêm bảng dữ liệu
+            PdfPTable table = new PdfPTable(guna2DataGridView1.Columns.Count);
+            // Thêm tiêu đề bảng
+            foreach (DataGridViewColumn column in guna2DataGridView1.Columns)
+            {
+                table.AddCell(new Phrase(column.HeaderText));
+            }
+
+            // Thêm dữ liệu bảng
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    table.AddCell(new Phrase(cell.Value?.ToString()));
+                }
+            }
+
+            document.Add(table);
+            document.Add(new Paragraph("\n"));
+            document.Add(new Paragraph($"Total: {labelTotal.Text}"));
+
+            document.Close();
+
+            return filePath;
+        }
+
+        private void SendEmail(string customerName, string toEmail, string filePath)
+        {
+            string from = "21520352@gm.uit.edu.vn";
+            string pass = "rkuu ninf qfta queu"; // Tốt hơn nên lưu mật khẩu trong biến môi trường hoặc tệp cấu hình
+            string subject = "Your Receipt from POS System";
+
+            MailMessage message = new MailMessage
+            {
+                From = new MailAddress(from),
+                Subject = subject,
+                Body = "Please find your receipt attached.",
+                IsBodyHtml = true
+            };
+            message.To.Add(toEmail);
+            message.Attachments.Add(new Attachment(filePath));
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+            {
+                EnableSsl = true,
+                Port = 587,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential(from, pass)
+            };
+
+            smtp.Send(message);
         }
     }
 }

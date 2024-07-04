@@ -62,7 +62,7 @@ namespace POS_system
 
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            
+            AddControls(new frmDashBoard());
         }
 
         private void btnHistory_Click(object sender, EventArgs e)

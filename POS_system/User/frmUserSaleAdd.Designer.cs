@@ -99,7 +99,7 @@
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(108, 45);
             this.btnSave.TabIndex = 47;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Buy";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
@@ -328,6 +328,7 @@
             this.txtDate.BorderRadius = 16;
             this.txtDate.BorderThickness = 1;
             this.txtDate.CheckedState.Parent = this.txtDate;
+            this.txtDate.Enabled = false;
             this.txtDate.FillColor = System.Drawing.Color.White;
             this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDate.HoverState.Parent = this.txtDate;

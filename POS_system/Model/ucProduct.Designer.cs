@@ -85,6 +85,7 @@
             // lblPName
             // 
             this.lblPName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPName.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblPName.Location = new System.Drawing.Point(41, 122);
             this.lblPName.Name = "lblPName";
             this.lblPName.Size = new System.Drawing.Size(139, 65);
