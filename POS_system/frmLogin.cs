@@ -81,5 +81,12 @@ namespace POS_system
         {
             Application.Exit();
         }
+
+        private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmSignup frm = new frmSignup();
+            frm.ShowDialog();
+        }
     }
 }

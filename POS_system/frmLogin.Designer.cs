@@ -35,9 +35,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.linkSignup = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +155,20 @@
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 493);
             this.guna2VSeparator1.TabIndex = 8;
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnExit.HoverState.FillColor = System.Drawing.Color.Crimson;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.IconColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(922, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(45, 29);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::POS_system.Properties.Resources._290120_account_avatar_man_profile_user_icon;
@@ -174,25 +190,33 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // btnExit
+            // label4
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.btnExit.HoverState.FillColor = System.Drawing.Color.Crimson;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(922, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(45, 29);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(582, 558);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 23);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "You don\'t have an account?";
+            // 
+            // linkSignup
+            // 
+            this.linkSignup.AutoSize = true;
+            this.linkSignup.Location = new System.Drawing.Point(813, 558);
+            this.linkSignup.Name = "linkSignup";
+            this.linkSignup.Size = new System.Drawing.Size(79, 29);
+            this.linkSignup.TabIndex = 40;
+            this.linkSignup.TabStop = true;
+            this.linkSignup.Text = "Signup";
+            this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignup_LinkClicked);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 616);
+            this.ClientSize = new System.Drawing.Size(979, 644);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.linkSignup);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.guna2PictureBox2);
@@ -224,5 +248,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkSignup;
     }
 }

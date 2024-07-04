@@ -91,3 +91,4 @@ E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\bin\
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\bin\Debug\System.Numerics.Vectors.xml
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\bin\Debug\System.Reflection.Metadata.xml
 E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\#UIT\32. Ngôn ngữ lập trình C#\Project\Final\pos_system\POS_system\obj\Debug\POS_system.frmSignup.resources

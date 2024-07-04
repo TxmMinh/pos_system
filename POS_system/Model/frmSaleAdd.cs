@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_system.User;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,9 @@ namespace POS_system.Model
 
         private void frmSaleAdd_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now; 
+            txtDate.Text = date.ToString("yyyy-MM-dd");
+
             string query = @"select cusID 'id', cusName 'name' from customer";
             MainClass.CBFill(query, cbCustomer);
 
@@ -196,6 +200,14 @@ namespace POS_system.Model
                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.Price, wdg.Price, wdg.PCost });
                 GrandTotal();
             };
+
+            w.lblPName.Click += (ss, ee) =>
+            {
+                frmDetailProduct detailForm = new frmDetailProduct();
+                detailForm.productId = w.id;
+                detailForm.price = w.Price;
+                detailForm.ShowDialog();
+            };
         }
 
         private void GrandTotal()
@@ -208,6 +220,7 @@ namespace POS_system.Model
             }
 
             lblTotal.Text = total.ToString("N2");
+
         }
 
         private void LoadProductsFromDatebase()

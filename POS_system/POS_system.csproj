@@ -90,6 +90,12 @@
     <Compile Include="ChatControl.Designer.cs">
       <DependentUpon>ChatControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignup.Designer.cs">
+      <DependentUpon>frmSignup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmCustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignup.resx">
+      <DependentUpon>frmSignup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>

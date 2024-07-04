@@ -23,6 +23,9 @@ namespace POS_system.Model
 
         private void frmPurchaseAdd_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now;
+            txtDate.Text = date.ToString("yyyy-MM-dd");
+
             cbProduct.SelectedIndexChanged -= new EventHandler(cbProduct_SelectedIndexChanged);
             string query1 = "select proID 'id', pName 'name' from product";
             string query2 = "select supID 'id', supName 'name' from supplier";
