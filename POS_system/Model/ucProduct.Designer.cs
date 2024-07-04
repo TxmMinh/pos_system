@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblPName = new System.Windows.Forms.Label();
             this.txtPic = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -39,19 +41,41 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.lblPrice);
             this.guna2ShadowPanel1.Controls.Add(this.lblPName);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(15, 55);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(158, 175);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(227, 257);
             this.guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 65);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Product Name:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Price: ";
             // 
             // lblPrice
             // 
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(3, 131);
+            this.lblPrice.Location = new System.Drawing.Point(78, 211);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(146, 29);
             this.lblPrice.TabIndex = 1;
@@ -61,19 +85,18 @@
             // lblPName
             // 
             this.lblPName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPName.Location = new System.Drawing.Point(10, 57);
+            this.lblPName.Location = new System.Drawing.Point(41, 122);
             this.lblPName.Name = "lblPName";
             this.lblPName.Size = new System.Drawing.Size(139, 65);
             this.lblPName.TabIndex = 0;
             this.lblPName.Text = "Product Name";
             this.lblPName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPName.Click += new System.EventHandler(this.lblPName_Click);
             // 
             // txtPic
             // 
             this.txtPic.BackColor = System.Drawing.Color.Transparent;
             this.txtPic.Image = global::POS_system.Properties.Resources._2530782_bag_briefcase_business_bag_documents_bag_general_icon;
-            this.txtPic.Location = new System.Drawing.Point(42, 13);
+            this.txtPic.Location = new System.Drawing.Point(69, 13);
             this.txtPic.Name = "txtPic";
             this.txtPic.ShadowDecoration.Parent = this.txtPic;
             this.txtPic.Size = new System.Drawing.Size(108, 96);
@@ -90,8 +113,9 @@
             this.Controls.Add(this.txtPic);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(189, 247);
+            this.Size = new System.Drawing.Size(260, 327);
             this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
 
@@ -101,7 +125,9 @@
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox txtPic;
-        private System.Windows.Forms.Label lblPName;
         private System.Windows.Forms.Label lblPrice;
+        public System.Windows.Forms.Label lblPName;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
     }
 }

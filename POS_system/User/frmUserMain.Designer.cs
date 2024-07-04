@@ -162,6 +162,7 @@
             this.btnSetting.Size = new System.Drawing.Size(180, 45);
             this.btnSetting.TabIndex = 9;
             this.btnSetting.Text = "Setting";
+            this.btnSetting.Visible = false;
             // 
             // btnHistory
             // 

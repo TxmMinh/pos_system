@@ -46,7 +46,7 @@ namespace POS_system.Model
 
         private void lblPName_Click(object sender, EventArgs e)
         {
-            onSelect?.Invoke(this, e);
+
         }
     }
 }

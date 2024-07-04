@@ -94,7 +94,55 @@ namespace POS_system.User
             return quantityProduct;
         }
 
-        public void AddItems(String id, string name, string price, Image pImage, string cost)
+        /*        public void AddItems(String id, string name, string price, Image pImage, string cost)
+                {
+                    var w = new ucProduct()
+                    {
+                        PName = name,
+                        Price = price,
+                        PImage = pImage,
+                        PCost = cost,
+                        id = Convert.ToInt32(id)
+                    };
+
+                    flowLayoutPanel1.Controls.Add(w);
+
+                    w.onSelect += (ss, ee) =>
+                    {
+                        if (CheckProductQuantity(name) <= 0)
+                        {
+                            MessageBox.Show("Product is out of stock", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+
+                        var wdg = (ucProduct)ss;
+                        foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+                        {
+                            if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
+                            {
+                                if (CheckProductQuantity(name) < int.Parse(item.Cells["dgvQuantity"].Value.ToString()) + 1)
+                                {
+                                    MessageBox.Show("Product is out of stock", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    return;
+                                }
+                                else
+                                {
+                                    item.Cells["dgvQuantity"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) + 1;
+                                    item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQuantity"].Value.ToString()) *
+                                                                    int.Parse(item.Cells["dgvPrice"].Value.ToString());
+                                    GrandTotal();
+                                    return;
+                                }
+                            }
+                        }
+
+                        // if not find the product in gv
+                        guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.Price, wdg.Price, wdg.PCost });
+                        GrandTotal();
+                    };
+                }*/
+
+        public void AddItems(string id, string name, string price, Image pImage, string cost)
         {
             var w = new ucProduct()
             {
@@ -109,13 +157,14 @@ namespace POS_system.User
 
             w.onSelect += (ss, ee) =>
             {
+                var wdg = (ucProduct)ss;
+
                 if (CheckProductQuantity(name) <= 0)
                 {
                     MessageBox.Show("Product is out of stock", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
-                var wdg = (ucProduct)ss;
                 foreach (DataGridViewRow item in guna2DataGridView1.Rows)
                 {
                     if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
@@ -139,6 +188,14 @@ namespace POS_system.User
                 // if not find the product in gv
                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.Price, wdg.Price, wdg.PCost });
                 GrandTotal();
+            };
+
+            w.lblPName.Click += (ss, ee) =>
+            {
+                frmDetailProduct detailForm = new frmDetailProduct();
+                detailForm.productId = w.id;
+                detailForm.price = w.Price;
+                detailForm.ShowDialog();
             };
         }
 

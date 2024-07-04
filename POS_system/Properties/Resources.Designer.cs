@@ -213,6 +213,16 @@ namespace POS_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5094667_chat_communication_message_talk_icon {
+            get {
+                object obj = ResourceManager.GetObject("5094667_chat_communication_message_talk_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _52664_bin_empty_recycle_icon {
             get {
                 object obj = ResourceManager.GetObject("52664_bin_empty_recycle_icon", resourceCulture);
