@@ -168,7 +168,7 @@ namespace POS_system.Model
 
             if (mainID == 0) //insert
             {
-                query1 = @"insert into tblMain values(@date, @type, @supID);
+                query1 = @"insert into tblMain (mdate, mType, mSupCusID) values(@date, @type, @supID);
                             select SCOPE_IDENTITY()";
             } else
             {
@@ -185,6 +185,7 @@ namespace POS_system.Model
                 MainClass.con.Open();
             }
 
+            Console.WriteLine(query1);
             if (mainID == 0)
             {
                 mainID = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -200,10 +201,10 @@ namespace POS_system.Model
 
                 if (did == 0)
                 {
-                    query2 = @"insert into tblDetails values (@mID, @proID, @qty, @price, @amount, @cost)";
+                    query2 = @"insert into tblDetails (dMainID, productID, quantity, amount, cost) values (@mID, @proID, @qty, @amount, @cost)";
                 } else
                 {
-                    query2 = @"update tblDetails set dMainID=@mID, productID=@proID, quantity=@qty, price=@price, amount=@amount, cost=@cost
+                    query2 = @"update tblDetails set dMainID=@mID, productID=@proID, quantity=@qty, amount=@amount, cost=@cost
                              where detailID=@id";
                 }
 
@@ -212,9 +213,8 @@ namespace POS_system.Model
                 cmd2.Parameters.AddWithValue("@mID", mainID);
                 cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvProID"].Value));
                 cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQuantity"].Value));
-                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvCost"].Value));
-                cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
-                cmd2.Parameters.AddWithValue("@cost", Convert.ToInt32(row.Cells["dgvCost"].Value));
+                cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value.ToString()));
+                cmd2.Parameters.AddWithValue("@cost", Convert.ToInt32(row.Cells["dgvCost"].Value.ToString()));
 
                 record += cmd2.ExecuteNonQuery();
             }

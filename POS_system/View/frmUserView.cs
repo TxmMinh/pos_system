@@ -44,8 +44,9 @@ namespace POS_system.View
             lb.Items.Add(dgvPass);
             lb.Items.Add(dgvPhonenumber);
             lb.Items.Add(dgvRole);
+            lb.Items.Add(dgvAddress);
 
-            string query = @"select userID, uName, uUsername, uPass, uPhoneNumber, uRole from users 
+            string query = @"select userID, uName, uUsername, uPass, uPhoneNumber, uRole, uAddress from users 
                             where uName like '%" + txtSearch.Text + "%' order by userID desc";
             MainClass.LoadData(query, guna2DataGridView1, lb);
         }
@@ -61,6 +62,7 @@ namespace POS_system.View
                 frm.txtUser.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvUsername"].Value);
                 frm.txtPass.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPass"].Value);
                 frm.txtPhone.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPhonenumber"].Value);
+                frm.txtAddress.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvAddress"].Value);
                 string roleValue = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvRole"].Value);
                 frm.cbRole.SelectedIndex = frm.cbRole.Items.IndexOf(roleValue);
 

@@ -173,7 +173,7 @@ namespace POS_system.Model
 
             if (id == 0) //insert
             {
-                query1 = @"insert into tblMain values(@date, @type, @cusID);
+                query1 = @"insert into tblMain(mdate, mType, mSupCusID) values(@date, @type, @cusID);
                             select SCOPE_IDENTITY()";
             }
             else
@@ -207,11 +207,11 @@ namespace POS_system.Model
 
                 if (did == 0)
                 {
-                    query2 = @"insert into tblDetails values (@mID, @proID, @qty, @price, @amount, @cost)";
+                    query2 = @"insert into tblDetails(dMainID, productID, quantity, price, amount) values (@mID, @proID, @qty, @price, @amount)";
                 }
                 else
                 {
-                    query2 = @"update tblDetails set dMainID=@mID, productID=@proID, quantity=@qty, price=@price, amount=@amount, cost=@cost
+                    query2 = @"update tblDetails set dMainID=@mID, productID=@proID, quantity=@qty, price=@price, amount=@amount
                              where detailID=@id";
                 }
 
@@ -220,9 +220,8 @@ namespace POS_system.Model
                 cmd2.Parameters.AddWithValue("@mID", id);
                 cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvProID"].Value));
                 cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQuantity"].Value));
-                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvCost"].Value));
+                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvPrice"].Value));
                 cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
-                cmd2.Parameters.AddWithValue("@cost", Convert.ToInt32(row.Cells["dgvCost"].Value));
 
                 record += cmd2.ExecuteNonQuery();
             }
@@ -267,10 +266,9 @@ namespace POS_system.Model
                 quantity = row["quantity"].ToString();
                 price = row["price"].ToString();
                 amt = row["amount"].ToString();
-                cost = row["cost"].ToString();
 
                 // 0 for serial and ID
-                guna2DataGridView1.Rows.Add(did, pid, pname, quantity, price, amt, cost);
+                guna2DataGridView1.Rows.Add(did, pid, pname, quantity, price, amt);
             }
         }
 
@@ -285,8 +283,10 @@ namespace POS_system.Model
                 {
                     int rowIndex = guna2DataGridView1.CurrentCell.RowIndex;
                     guna2DataGridView1.Rows.RemoveAt(rowIndex);
-
-                    int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
+                    if (guna2DataGridView1.CurrentRow != null && guna2DataGridView1.CurrentRow.Cells["dgvId"].Value != null)
+                    {
+                        int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
+                    }
                     string query1 = "Delete from tblMain where MainID = " + id + "";
                     string query2 = "Delete from tblDetails where dMainID = " + id + "";
                     Hashtable ht = new Hashtable();

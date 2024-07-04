@@ -132,7 +132,7 @@
             this.btnLogout.Image = global::POS_system.Properties.Resources._728935_exit_left_logout_arrow_move_icon;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnLogout.Location = new System.Drawing.Point(37, 401);
+            this.btnLogout.Location = new System.Drawing.Point(29, 401);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(180, 45);
@@ -276,7 +276,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(6, 6);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(981, 659);
+            this.guna2Panel3.Size = new System.Drawing.Size(990, 668);
             this.guna2Panel3.TabIndex = 1;
             // 
             // frmUserMain
@@ -289,6 +289,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "frmUserMain";
             this.Text = "frmUserMain";
+            this.Load += new System.EventHandler(this.frmUserMain_Load_1);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
@@ -300,7 +301,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnMax;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
@@ -313,5 +313,6 @@
         private Guna.UI2.WinForms.Guna2Button btnShopping;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2ControlBox btnMax;
     }
 }

@@ -27,16 +27,6 @@ namespace POS_system
             InitializeComponent();
         }
 
-        private void frmUserMain_Load(object sender, EventArgs e)
-        {
-            _obj = this;
-            btnMax.PerformClick();
-
-            lblUser.Text = MainClass.USER;
-            guna2CirclePictureBox1.Image = MainClass.IMG;
-            btnHome.PerformClick();
-        }
-
         public void AddControls(Form F)
         {
             this.CenterPanel.Controls.Clear();
@@ -78,6 +68,16 @@ namespace POS_system
         private void btnHistory_Click(object sender, EventArgs e)
         {
             AddControls(new frmUserViewSale());
+        }
+
+        private void frmUserMain_Load_1(object sender, EventArgs e)
+        {
+            _obj = this;
+            btnMax.PerformClick();
+
+            lblUser.Text = MainClass.USER;
+            guna2CirclePictureBox1.Image = MainClass.IMG;
+            btnHome.PerformClick();
         }
     }
 }

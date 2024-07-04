@@ -46,12 +46,12 @@ namespace POS_system.User
             lb.Items.Add(dgvCustomer);
             lb.Items.Add(dgvAmount);
 
-            string query = @"select dmainID, mdate, m.mSupCusID, c.uUsername, SUM(d.amount) as amount
+            string query = @"select dmainID, mdate, m.mUserID, c.uUsername, SUM(d.amount) as amount
                             from tblMain m
                             inner join tblDetails d on d.dMainID = m.MainID
-                            inner join users c on c.userID = m.mSupCusID
+                            inner join users c on c.userID = m.mUserID
                             where m.mType = 'SAL' and uUsername like '%" + txtSearch.Text + "%'" +
-                            " group by dMainID, mDate, m.mSupCusID, c.uUsername";
+                            " group by dMainID, mDate, m.mUserID, c.uUsername";
 
             MainClass.LoadData(query, guna2DataGridView1, lb);
         }
@@ -61,9 +61,10 @@ namespace POS_system.User
             // update
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
-                frmSaleAdd frm = new frmSaleAdd();
+                frmUserReceipt frm = new frmUserReceipt();
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
                 frm.cusID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvCusID"].Value);
+                frm.date = Convert.ToDateTime(guna2DataGridView1.CurrentRow.Cells["dgvDate"].Value);
                 MainClass.BlurBlackground(frm);
                 LoadData();
             }

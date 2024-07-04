@@ -74,7 +74,7 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.HoverState.Parent = this.btnClear;
-            this.btnClear.Location = new System.Drawing.Point(789, 153);
+            this.btnClear.Location = new System.Drawing.Point(763, 153);
             this.btnClear.Name = "btnClear";
             this.btnClear.ShadowDecoration.Parent = this.btnClear;
             this.btnClear.Size = new System.Drawing.Size(109, 45);
@@ -94,7 +94,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(659, 153);
+            this.btnSave.Location = new System.Drawing.Point(633, 153);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(108, 45);
@@ -121,7 +121,7 @@
             this.flowLayoutPanel1.Controls.Add(this.ucProduct1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 229);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(873, 558);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(847, 558);
             this.flowLayoutPanel1.TabIndex = 44;
             // 
             // ucProduct1
@@ -177,14 +177,14 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(927, 191);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(898, 191);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 35;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(375, 606);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(526, 606);
             this.guna2DataGridView1.TabIndex = 43;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -291,10 +291,10 @@
             this.guna2Panel1.Controls.Add(this.lblTotal);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(927, 74);
+            this.guna2Panel1.Location = new System.Drawing.Point(898, 74);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(375, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(526, 70);
             this.guna2Panel1.TabIndex = 42;
             // 
             // lblTotal
@@ -400,14 +400,14 @@
             this.txtBarcode.FocusedState.Parent = this.txtBarcode;
             this.txtBarcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtBarcode.HoverState.Parent = this.txtBarcode;
-            this.txtBarcode.Location = new System.Drawing.Point(643, 70);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4, 39, 4, 39);
+            this.txtBarcode.Location = new System.Drawing.Point(633, 70);
+            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4, 19, 4, 19);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.PasswordChar = '\0';
             this.txtBarcode.PlaceholderText = "";
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.ShadowDecoration.Parent = this.txtBarcode;
-            this.txtBarcode.Size = new System.Drawing.Size(255, 40);
+            this.txtBarcode.Size = new System.Drawing.Size(231, 40);
             this.txtBarcode.TabIndex = 37;
             this.txtBarcode.Tag = "";
             this.txtBarcode.TextOffset = new System.Drawing.Point(10, 0);
@@ -416,7 +416,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(662, 36);
+            this.label2.Location = new System.Drawing.Point(636, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 36;
@@ -465,7 +465,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 832);
+            this.ClientSize = new System.Drawing.Size(1448, 832);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSeach);

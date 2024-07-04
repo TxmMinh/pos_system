@@ -40,6 +40,8 @@
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Address = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,7 +230,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(47, 334);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 29);
+            this.label6.Size = new System.Drawing.Size(43, 23);
             this.label6.TabIndex = 15;
             this.label6.Text = "Role";
             // 
@@ -248,17 +250,55 @@
             this.cbRole.HoverState.Parent = this.cbRole;
             this.cbRole.ItemHeight = 30;
             this.cbRole.ItemsAppearance.Parent = this.cbRole;
-            this.cbRole.Location = new System.Drawing.Point(34, 394);
+            this.cbRole.Location = new System.Drawing.Point(34, 383);
             this.cbRole.Name = "cbRole";
             this.cbRole.ShadowDecoration.Parent = this.cbRole;
             this.cbRole.Size = new System.Drawing.Size(283, 36);
             this.cbRole.TabIndex = 16;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.AutoRoundedCorners = true;
+            this.txtAddress.BorderRadius = 23;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.Parent = this.txtAddress;
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.txtAddress.FocusedState.Parent = this.txtAddress;
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.txtAddress.HoverState.Parent = this.txtAddress;
+            this.txtAddress.Location = new System.Drawing.Point(346, 383);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 39, 4, 39);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
+            this.txtAddress.Size = new System.Drawing.Size(289, 49);
+            this.txtAddress.TabIndex = 18;
+            this.txtAddress.Tag = "v";
+            this.txtAddress.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // Address
+            // 
+            this.Address.AutoSize = true;
+            this.Address.Location = new System.Drawing.Point(366, 334);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(88, 29);
+            this.Address.TabIndex = 17;
+            this.Address.Text = "Address";
             // 
             // frmUserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 589);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.Address);
             this.Controls.Add(this.cbRole);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtUser);
@@ -286,6 +326,8 @@
             this.Controls.SetChildIndex(this.txtUser, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cbRole, 0);
+            this.Controls.SetChildIndex(this.Address, 0);
+            this.Controls.SetChildIndex(this.txtAddress, 0);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,5 +348,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtUser;
         private System.Windows.Forms.Label label6;
         public Guna.UI2.WinForms.Guna2ComboBox cbRole;
+        public Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private System.Windows.Forms.Label Address;
     }
 }

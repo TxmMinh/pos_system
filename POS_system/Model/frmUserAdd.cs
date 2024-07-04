@@ -34,7 +34,7 @@ namespace POS_system
                 string query = "";
                 if (id == 0) //insert 
                 {
-                    query = @"insert into users values (@name, @username, @pass, @phone, @image, @role)";
+                    query = @"insert into users values (@name, @username, @pass, @phone, @image, @role, @address)";
                 }
                 else // update
                 {
@@ -43,7 +43,8 @@ namespace POS_system
                               uPass=@pass,
                               uPhoneNumber=@phone,
                               uImage=@image,
-                              uRole=@role
+                              uRole=@role,
+                              uAddress=@address
                               where userID=@id";
                 }
 
@@ -59,6 +60,7 @@ namespace POS_system
                 ht.Add("@pass", txtPass.Text);
                 ht.Add("@phone", txtPhone.Text);
                 ht.Add("@role", cbRole.SelectedItem.ToString());
+                ht.Add("@address", txtAddress.Text);
                 ht.Add("@image", imageByteArray);
 
                 if (MainClass.SQL(query, ht) > 0)
@@ -69,6 +71,7 @@ namespace POS_system
                     txtUser.Text = "";
                     txtPass.Text = "";
                     txtPhone.Text = "";
+                    txtAddress.Text = "";
                     cbRole.SelectedItem = 1;
                     txtPic.Image = Properties.Resources._1564535_customer_user_userphoto_account_person_icon;
                     txtName.Focus();

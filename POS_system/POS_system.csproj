@@ -146,6 +146,12 @@
     <Compile Include="User\frmUserMain.Designer.cs">
       <DependentUpon>frmUserMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\frmUserReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserReceipt.Designer.cs">
+      <DependentUpon>frmUserReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\frmUserSaleAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmUserMain.resx">
       <DependentUpon>frmUserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserReceipt.resx">
+      <DependentUpon>frmUserReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmUserSaleAdd.resx">
       <DependentUpon>frmUserSaleAdd.cs</DependentUpon>
@@ -388,6 +397,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\728935_exit_left_logout_arrow_move_icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
